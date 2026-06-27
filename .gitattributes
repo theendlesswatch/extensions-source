@@ -1,5 +1,5 @@
 /gradlew linguist-generated
 /gradlew.bat linguist-generated
-
+.github/workflows/build_push.yml merge=ours
 * text=auto eol=lf
 *.bat text eol=crlf
