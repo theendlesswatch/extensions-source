@@ -104,7 +104,7 @@ jobs:
     # Run whenever there's anything to publish, new/changed builds OR only deletions
     if: >-
       always() &&
-      github.repository == 'keiyoushi/extensions-source' &&
+      github.repository == 'theendlesswatch/extensions-source' &&
       needs.prepare.result == 'success' &&
       needs.build.result != 'failure' &&
       needs.build.result != 'cancelled' &&
@@ -148,7 +148,7 @@ jobs:
             git add .
             git commit -m "Update extensions repo"
             git push
-            curl https://purge.jsdelivr.net/gh/keiyoushi/extensions@repo/index.min.json
+            curl https://purge.jsdelivr.net/gh/theendlesswatch/extensions@repo/index.min.json
           else
             echo "No changes to commit"
           fi
