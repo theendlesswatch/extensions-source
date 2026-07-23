@@ -6,9 +6,9 @@ plugins {
 
 keiyoushi {
     name = "BiliManga"
-    versionCode = 11
-    contentWarning = ContentWarning.NSFW
-    libVersion = "1.4"
+    versionCode = 12
+    contentWarning = ContentWarning.MIXED
+    libVersion = "1.6"
 
     source {
         name = "嗶哩漫畫"

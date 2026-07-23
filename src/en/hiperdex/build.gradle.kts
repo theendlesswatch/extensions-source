@@ -7,14 +7,14 @@ plugins {
 keiyoushi {
     name = "Hiperdex"
     versionCode = 80
-    contentWarning = ContentWarning.NSFW
-    libVersion = "1.4"
+    contentWarning = ContentWarning.MIXED
+    libVersion = "1.6"
     theme = "hiper"
 
     source {
         lang = "en"
         baseUrl {
-            custom("https://hiperdex.com")
+            custom("https://hiperdex.tv")
         }
     }
 }

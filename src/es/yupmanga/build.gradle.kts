@@ -6,8 +6,8 @@ plugins {
 
 keiyoushi {
     name = "Yupmanga"
-    versionCode = 16
-    contentWarning = ContentWarning.NSFW
+    versionCode = 17
+    contentWarning = ContentWarning.MIXED
     libVersion = "1.4"
 
     source {

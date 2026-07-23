@@ -6,12 +6,16 @@ plugins {
 
 keiyoushi {
     name = "CuuTruyen (unoriginal)"
-    versionCode = 2
-    contentWarning = ContentWarning.NSFW
-    libVersion = "1.4"
+    versionCode = 3
+    contentWarning = ContentWarning.MIXED
+    libVersion = "1.6"
 
     source {
         lang = "vi"
         baseUrl = "https://cuutruyen.moe"
+    }
+
+    deeplink {
+        path("/truyen/..*")
     }
 }

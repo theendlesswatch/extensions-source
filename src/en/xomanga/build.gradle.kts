@@ -6,12 +6,16 @@ plugins {
 
 keiyoushi {
     name = "XoManga"
-    versionCode = 1
-    contentWarning = ContentWarning.NSFW
-    libVersion = "1.4"
+    versionCode = 2
+    contentWarning = ContentWarning.MIXED
+    libVersion = "1.6"
 
     source {
         lang = "en"
         baseUrl = "https://www.xomanga.site"
+    }
+
+    deeplink {
+        path("/details")
     }
 }
