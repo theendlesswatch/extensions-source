@@ -15,6 +15,7 @@ import eu.kanade.tachiyomi.source.model.SMangaUpdate
 import keiyoushi.annotation.Source
 import keiyoushi.network.get
 import keiyoushi.network.post
+import keiyoushi.network.rateLimit
 import keiyoushi.source.KeiSource
 import keiyoushi.utils.firstInstanceOrNull
 import keiyoushi.utils.getPreferences
@@ -53,6 +54,7 @@ abstract class Kagane :
 
     override fun OkHttpClient.Builder.configureClient() = apply {
         addInterceptor(::refreshTokenInterceptor)
+        rateLimit(3)
     }
 
     private fun refreshTokenInterceptor(chain: Interceptor.Chain): Response {
@@ -559,7 +561,7 @@ abstract class Kagane :
 
     val sources: Map<String, String>
         get() {
-            if (sourceCache == null) {
+            if (sourceCache.isNullOrEmpty()) {
                 getFilterList()
             }
             return (sourceCache ?: emptyMap()).also { sourceCache = it }

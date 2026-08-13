@@ -6,9 +6,9 @@ plugins {
 
 keiyoushi {
     name = "MangaFire"
-    versionCode = 26
+    versionCode = 29
     contentWarning = ContentWarning.MIXED
-    libVersion = "1.4"
+    libVersion = "1.6"
 
     listOf("en", "es", "es-419", "fr", "ja", "pt", "pt-BR").forEach {
         source {
@@ -16,5 +16,9 @@ keiyoushi {
             baseUrl = "https://mangafire.to"
             versionId = 2
         }
+    }
+
+    deeplink {
+        path("/title/..*")
     }
 }
